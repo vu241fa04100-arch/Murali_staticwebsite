@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MOTOVISTA | Automobile Excellence</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            MOTO<span>VISTA</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">WELCOME TO MOTOVISTA</p>
+
+        <h1>
+            DRIVE YOUR
+            <span>DREAM</span>
+        </h1>
+
+        <p>
+            Discover powerful performance, luxury design,
+            and the latest automobiles in one place.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#cars" class="btn">Explore Cars</a>
+            <a href="#about" class="btn outline">Learn More</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+        <div class="feature-icon">🏎️</div>
+        <h3>High Performance</h3>
+        <p>Experience powerful engines and advanced technology.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">✨</div>
+        <h3>Luxury Design</h3>
+        <p>Elegant interiors and premium exterior styling.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">⚙️</div>
+        <h3>Advanced Technology</h3>
+        <p>Smart features designed for a better driving experience.</p>
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURED CARS ================= -->
+
+<section class="cars-section" id="cars">
+
+    <div class="section-heading">
+
+        <p>OUR COLLECTION</p>
+
+        <h2>Featured Cars</h2>
+
+        <span>
+            Explore some of the world's most exciting automobiles.
+        </span>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search cars..."
+            onkeyup="searchCars()"
+        >
+
+    </div>
+
+
+    <div class="car-grid" id="carGrid">
+
+
+        <!-- CAR 1 -->
+
+        <div class="car-card" data-name="BMW M4" data-category="sports">
+
+            <div class="car-image">
+                <img src="images/car1.jpg" alt="BMW M4">
+
+                <span class="tag">SPORTS</span>
+            </div>
+
+            <div class="car-info">
+
+                <h3>BMW M4</h3>
+
+                <p class="description">
+                    A high-performance sports coupe with aggressive styling.
+                </p>
+
+                <div class="car-details">
+                    <span>⚡ 503 HP</span>
+                    <span>⚙️ Automatic</span>
+                </div>
+
+                <div class="card-bottom">
+                    <strong>₹1.48 Cr</strong>
+
+                    <button onclick="showDetails(
+                        'BMW M4',
+                        '₹1.48 Cr',
+                        '503 HP',
+                        'Automatic',
+                        '3.0L Twin Turbo',
+                        'High-performance sports coupe with premium interior and advanced driving technology.'
+                    )">
+                        View Details
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR 2 -->
+
+        <div class="car-card" data-name="Mercedes AMG GT" data-category="luxury">
+
+            <div class="car-image">
+
+                <img src="images/car2.jpg" alt="Mercedes AMG GT">
+
+                <span class="tag">LUXURY</span>
+
+            </div>
+
+            <div class="car-info">
+
+                <h3>Mercedes AMG GT</h3>
+
+                <p class="description">
+                    Premium performance combined with sophisticated luxury.
+                </p>
+
+                <div class="car-details">
+                    <span>⚡ 577 HP</span>
+                    <span>⚙️ Automatic</span>
+                </div>
+
+                <div class="card-bottom">
+
+                    <strong>₹2.75 Cr</strong>
+
+                    <button onclick="showDetails(
+                        'Mercedes AMG GT',
+                        '₹2.75 Cr',
+                        '577 HP',
+                        'Automatic',
+                        '4.0L V8',
+                        'Luxury performance car offering breathtaking acceleration and premium comfort.'
+                    )">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR 3 -->
+
+        <div class="car-card" data-name="Porsche 911" data-category="sports">
+
+            <div class="car-image">
+
+                <img src="images/car3.jpg" alt="Porsche 911">
+
+                <span class="tag">SPORTS</span>
+
+            </div>
+
+            <div class="car-info">
+
+                <h3>Porsche 911</h3>
+
+                <p class="description">
+                    Legendary sports car built for precision and speed.
+                </p>
+
+                <div class="car-details">
+                    <span>⚡ 443 HP</span>
+                    <span>⚙️ PDK</span>
+                </div>
+
+                <div class="card-bottom">
+
+                    <strong>₹1.99 Cr</strong>
+
+                    <button onclick="showDetails(
+                        'Porsche 911',
+                        '₹1.99 Cr',
+                        '443 HP',
+                        'PDK',
+                        '3.0L Twin Turbo',
+                        'Iconic sports car delivering exceptional handling, performance and driving excitement.'
+                    )">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- CAR 4 -->
+
+        <div class="car-card" data-name="Range Rover" data-category="suv">
+
+            <div class="car-image">
+
+                <img src="images/car4.jpg" alt="Range Rover">
+
+                <span class="tag">SUV</span>
+
+            </div>
+
+            <div class="car-info">
+
+                <h3>Range Rover</h3>
+
+                <p class="description">
+                    Premium SUV combining comfort, capability and elegance.
+                </p>
+
+                <div class="car-details">
+                    <span>⚡ 394 HP</span>
+                    <span>⚙️ Automatic</span>
+                </div>
+
+                <div class="card-bottom">
+
+                    <strong>₹2.39 Cr</strong>
+
+                    <button onclick="showDetails(
+                        'Range Rover',
+                        '₹2.39 Cr',
+                        '394 HP',
+                        'Automatic',
+                        '3.0L Petrol',
+                        'Luxury SUV with advanced off-road capability and a refined premium cabin.'
+                    )">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR 5 -->
+
+        <div class="car-card" data-name="Audi RS7" data-category="luxury">
+
+            <div class="car-image">
+
+                <img src="images/car5.jpg" alt="Audi RS7">
+
+                <span class="tag">LUXURY</span>
+
+            </div>
+
+            <div class="car-info">
+
+                <h3>Audi RS7</h3>
+
+                <p class="description">
+                    A stylish grand tourer with impressive performance.
+                </p>
+
+                <div class="car-details">
+                    <span>⚡ 591 HP</span>
+                    <span>⚙️ Tiptronic</span>
+                </div>
+
+                <div class="card-bottom">
+
+                    <strong>₹1.94 Cr</strong>
+
+                    <button onclick="showDetails(
+                        'Audi RS7',
+                        '₹1.94 Cr',
+                        '591 HP',
+                        'Tiptronic',
+                        '4.0L V8',
+                        'Powerful luxury sportback combining everyday practicality with supercar performance.'
+                    )">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR 6 -->
+
+        <div class="car-card" data-name="Toyota Land Cruiser" data-category="suv">
+
+            <div class="car-image">
+
+                <img src="images/car6.jpg" alt="Toyota Land Cruiser">
+
+                <span class="tag">SUV</span>
+
+            </div>
+
+            <div class="car-info">
+
+                <h3>Toyota Land Cruiser</h3>
+
+                <p class="description">
+                    Legendary SUV known for reliability and off-road ability.
+                </p>
+
+                <div class="car-details">
+                    <span>⚡ 304 HP</span>
+                    <span>⚙️ Automatic</span>
+                </div>
+
+                <div class="card-bottom">
+
+                    <strong>₹2.10 Cr</strong>
+
+                    <button onclick="showDetails(
+                        'Toyota Land Cruiser',
+                        '₹2.10 Cr',
+                        '304 HP',
+                        'Automatic',
+                        '3.3L V6',
+                        'Rugged luxury SUV designed for reliability, comfort and demanding terrain.'
+                    )">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories" id="categories">
+
+    <div class="section-heading">
+
+        <p>EXPLORE</p>
+
+        <h2>Car Categories</h2>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <div class="category-card sports">
+
+            <div>
+                <h3>Sports Cars</h3>
+                <p>Speed. Power. Performance.</p>
+                <button onclick="filterCategory('sports')">
+                    Explore
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="category-card luxury">
+
+            <div>
+                <h3>Luxury Cars</h3>
+                <p>Elegance without limits.</p>
+                <button onclick="filterCategory('luxury')">
+                    Explore
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="category-card suv">
+
+            <div>
+                <h3>SUVs</h3>
+                <p>Adventure starts here.</p>
+                <button onclick="filterCategory('suv')">
+                    Explore
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+
+        <img src="images/car3.jpg" alt="Luxury car">
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p class="section-label">ABOUT MOTOVISTA</p>
+
+        <h2>
+            Where Passion Meets
+            <span>Performance</span>
+        </h2>
+
+        <p>
+            MOTOVISTA is an automobile discovery platform created
+            for people who love cars, technology and performance.
+        </p>
+
+        <p>
+            From powerful sports cars to luxurious SUVs, we bring
+            exciting automobiles together in one modern platform.
+        </p>
+
+
+        <div class="stats">
+
+            <div>
+                <strong>50+</strong>
+                <span>Cars</span>
+            </div>
+
+            <div>
+                <strong>20+</strong>
+                <span>Brands</span>
+            </div>
+
+            <div>
+                <strong>10K+</strong>
+                <span>Visitors</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-heading">
+
+        <p>GET IN TOUCH</p>
+
+        <h2>Contact Us</h2>
+
+        <span>
+            Have a question? Send us a message.
+        </span>
+
+    </div>
+
+
+    <form id="contactForm" onsubmit="submitForm(event)">
+
+        <div class="form-row">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+        </div>
+
+
+        <input
+            type="text"
+            id="subject"
+            placeholder="Subject"
+            required
+        >
+
+
+        <textarea
+            id="message"
+            rows="6"
+            placeholder="Your Message"
+            required
+        ></textarea>
+
+
+        <button type="submit" class="btn">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal" id="carModal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <p class="modal-label">CAR DETAILS</p>
+
+        <h2 id="modalName">Car Name</h2>
+
+        <p id="modalDescription">
+            Car description
+        </p>
+
+
+        <div class="modal-details">
+
+            <div>
+                <span>Price</span>
+                <strong id="modalPrice"></strong>
+            </div>
+
+            <div>
+                <span>Power</span>
+                <strong id="modalPower"></strong>
+            </div>
+
+            <div>
+                <span>Transmission</span>
+                <strong id="modalTransmission"></strong>
+            </div>
+
+            <div>
+                <span>Engine</span>
+                <strong id="modalEngine"></strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <div class="logo">
+                MOTO<span>VISTA</span>
+            </div>
+
+            <p>
+                Discover. Compare. Drive.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="#home">Home</a>
+            <a href="#cars">Cars</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Follow Us</h4>
+
+            <p>Instagram</p>
+            <p>YouTube</p>
+            <p>Facebook</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 MOTOVISTA. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
